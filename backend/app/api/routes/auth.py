@@ -43,11 +43,17 @@ def signup(payload: SignupRequest, response: Response, db: Session = Depends(get
 
     # Issue JWT in HTTP-only cookie
     token = create_access_token(data={"sub": user.id, "role": user.role})
+    
+    from app.core.config import get_settings
+    settings = get_settings()
+    is_prod = settings.FRONTEND_URL != "http://localhost:3000"
+
     response.set_cookie(
         key="access_token",
         value=token,
         httponly=True,
-        samesite="lax",
+        samesite="none" if is_prod else "lax",
+        secure=is_prod,
         max_age=3600,
         path="/",
     )
@@ -66,11 +72,17 @@ def login(payload: LoginRequest, response: Response, db: Session = Depends(get_d
         )
 
     token = create_access_token(data={"sub": user.id, "role": user.role})
+    
+    from app.core.config import get_settings
+    settings = get_settings()
+    is_prod = settings.FRONTEND_URL != "http://localhost:3000"
+
     response.set_cookie(
         key="access_token",
         value=token,
         httponly=True,
-        samesite="lax",
+        samesite="none" if is_prod else "lax",
+        secure=is_prod,
         max_age=3600,
         path="/",
     )
@@ -81,7 +93,17 @@ def login(payload: LoginRequest, response: Response, db: Session = Depends(get_d
 @router.post("/logout", response_model=MessageResponse)
 def logout(response: Response):
     """Clear the JWT cookie."""
-    response.delete_cookie(key="access_token", path="/")
+    
+    from app.core.config import get_settings
+    settings = get_settings()
+    is_prod = settings.FRONTEND_URL != "http://localhost:3000"
+    
+    response.delete_cookie(
+        key="access_token", 
+        path="/",
+        samesite="none" if is_prod else "lax",
+        secure=is_prod,
+    )
     return {"message": "Logged out successfully"}
 
 
