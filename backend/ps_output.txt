@@ -1,0 +1,4 @@
+akshat-+    1447  0.0  0.1  34444 26044 ?        Ss   18:47   0:00 /usr/bin/python3 /usr/bin/uwsm aux app-daemon
+akshat-+    1469  0.0  0.2  69504 39780 ?        Ss   18:47   0:00 /usr/bin/python3 /usr/share/system-config-printer/applet.py
+akshat-+    3842  0.1  0.6 447476 103968 pts/4   Sl+  18:48   0:03 /home/akshat-dubey/Documents/website/backend/venv/bin/python /home/akshat-dubey/Documents/website/backend/venv/bin/uvicorn app.main:app --port 8000
+akshat-+    9180  0.0  0.0   6484  4212 pts/1    S+   19:42   0:00 grep python

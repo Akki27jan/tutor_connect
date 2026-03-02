@@ -1,0 +1,40 @@
+
+> tutoring-platform-frontend@1.0.0 build
+> next build
+
+   ▲ Next.js 14.1.0
+   - Environments: .env.local
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/10) ...
+   Generating static pages (2/10) 
+   Generating static pages (4/10) 
+   Generating static pages (7/10) 
+ ✓ Generating static pages (10/10) 
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    1.06 kB        92.1 kB
+├ ○ /_not-found                          882 B          85.1 kB
+├ ○ /auth/login                          2.13 kB         126 kB
+├ ○ /auth/signup                         2.13 kB         126 kB
+├ λ /booking/[bookingId]/confirm         2.42 kB         119 kB
+├ ○ /booking/new                         2.78 kB         120 kB
+├ ○ /dashboard/student                   2.84 kB         120 kB
+├ ○ /dashboard/tutor                     4.64 kB         122 kB
+└ ○ /search                              2.35 kB         124 kB
++ First Load JS shared by all            84.2 kB
+  ├ chunks/69-082fd49cf822d1cf.js        28.9 kB
+  ├ chunks/fd9d1056-7f5ff294dd841717.js  53.4 kB
+  └ other shared chunks (total)          1.96 kB
+
+
+ƒ Middleware                             40.3 kB
+
+○  (Static)   prerendered as static content
+λ  (Dynamic)  server-rendered on demand using Node.js
+

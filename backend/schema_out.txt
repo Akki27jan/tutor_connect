@@ -1,0 +1,16 @@
+CREATE TABLE bookings (
+	id VARCHAR NOT NULL, 
+	student_id VARCHAR NOT NULL, 
+	tutor_id VARCHAR NOT NULL, 
+	topic_id VARCHAR NOT NULL, 
+	slot_id VARCHAR NOT NULL, 
+	status VARCHAR(20) NOT NULL, 
+	calendar_event_id VARCHAR(255), 
+	meet_link VARCHAR(500), 
+	created_at DATETIME NOT NULL, subject VARCHAR(255) NOT NULL DEFAULT '', 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(student_id) REFERENCES users (id), 
+	FOREIGN KEY(tutor_id) REFERENCES tutor_profiles (id), 
+	FOREIGN KEY(topic_id) REFERENCES topics (id), 
+	FOREIGN KEY(slot_id) REFERENCES availability_slots (id)
+);

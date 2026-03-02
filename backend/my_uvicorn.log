@@ -1,0 +1,11 @@
+INFO:     Started server process [10710]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
+INFO:     127.0.0.1:56062 - "POST /api/auth/signup HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56068 - "POST /api/auth/login HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:56072 - "GET /api/tutors?page=1&limit=10 HTTP/1.1" 404 Not Found
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [10710]

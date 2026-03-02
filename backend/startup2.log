@@ -1,0 +1,6 @@
+INFO:     Started server process [47340]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:38088 - "POST /api/auth/register HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56290 - "POST /api/auth/register HTTP/1.1" 404 Not Found

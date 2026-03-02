@@ -1,0 +1,2 @@
+Booking 856cb3ee-dfcb-4950-8017-67bf7522a24a for 60badf42-126b-4772-a737-bc44318ae4bb with 270d06bb-6d35-4ec9-9ccd-cc208b3c319f
+Error! OperationalError('(sqlite3.OperationalError) table bookings has no column named subject')

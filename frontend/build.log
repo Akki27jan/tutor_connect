@@ -1,0 +1,31 @@
+
+> tutoring-platform-frontend@1.0.0 build
+> next build
+
+   ▲ Next.js 14.1.0
+   - Environments: .env.local
+
+   Creating an optimized production build ...
+Compiler edge-server unexpectedly exited with code: null and signal: SIGTERM
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/10) ...
+
+ ⨯ useSearchParams() should be wrapped in a suspense boundary at page "/booking/new". Read more: https://nextjs.org/docs/messages/missing-suspense-with-csr-bailout
+
+Error occurred prerendering page "/booking/new". Read more: https://nextjs.org/docs/messages/prerender-error
+
+   Generating static pages (2/10) 
+   Generating static pages (4/10) 
+
+ ⨯ useSearchParams() should be wrapped in a suspense boundary at page "/search". Read more: https://nextjs.org/docs/messages/missing-suspense-with-csr-bailout
+
+Error occurred prerendering page "/search". Read more: https://nextjs.org/docs/messages/prerender-error
+
+   Generating static pages (7/10) 
+ ✓ Generating static pages (10/10) 
+
+> Export encountered errors on following paths:
+	/booking/new/page: /booking/new
+	/search/page: /search

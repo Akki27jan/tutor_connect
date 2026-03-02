@@ -1,0 +1,32 @@
+# Node
+node_modules/
+.next/
+out/
+build/
+npm-debug.log
+yarn-error.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv
+venv/
+env/
+ENV/
+
+# Database
+*.sqlite
+*.db
+
+# macOS
+.DS_Store
+
+# Vercel
+.vercel
+
+# Misc
+cookies.txt
+test.txt
+test_pydantic_tz.py

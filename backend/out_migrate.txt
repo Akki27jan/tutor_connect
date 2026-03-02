@@ -1,0 +1,1 @@
+Bookings table successfully migrated without topic_id.
